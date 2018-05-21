@@ -16,7 +16,6 @@ while loop == 'true':
     Auth_user = ['Anthony', 'anthony']
     Password = ['2017']
 
-def login():
     user = input("Please enter your name: ")
     password = input("and your password please...: ")
     if user in Auth_user and password in Password:
@@ -26,7 +25,6 @@ def login():
         print("Invalid username/password!")
         print("Access denied!")
 cur = db.cursor()
-login()
 
 print("Here are the current driver standings: ")
 cur.execute("SELECT * from drivers")
@@ -112,7 +110,4 @@ else:
         print("You have successfully logged out")
         time.sleep(2)
         sys.exit()
-    login()
-
-login()
 
